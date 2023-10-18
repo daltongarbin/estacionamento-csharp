@@ -29,7 +29,7 @@ public class Program
 
                 if (motorcyleSlots < 1)
                 {
-                    throw new ArgumentException("Deve ter pelo menos 1 vaga para moto!");
+                    throw new ArgumentException();
                 }
 
                 Console.Write("Numero de vagas para estacionamento de carros: ");
@@ -37,7 +37,7 @@ public class Program
                 carSlots = int.Parse(inputUsr);
                 if (carSlots < 1)
                 {
-                    throw new ArgumentException("Deve ter pelo menos 1 vaga para carro!");
+                    throw new ArgumentException();
                 }
 
                 Console.Write("Numero de vagas para estacionamento de vans: ");
@@ -46,7 +46,7 @@ public class Program
 
                 if (vanSlots < 1)
                 {
-                    throw new ArgumentException("Deve ter pelo menos 1 vaga para van!");
+                    throw new ArgumentException();
                 }
 
                 ParkingLotService manager = new ParkingLotService(motorcyleSlots, carSlots, vanSlots);
